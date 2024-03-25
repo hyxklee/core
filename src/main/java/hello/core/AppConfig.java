@@ -20,7 +20,6 @@ public class AppConfig {//외부에서 구현체의 생성과 관리를 담당. 
         return new MemoryMemberRepository();
     }
 
-
     @Bean
     public DiscountPolicy discountPolicy(){
         return new RateDiscountPolicy();
@@ -35,8 +34,8 @@ public class AppConfig {//외부에서 구현체의 생성과 관리를 담당. 
 
     @Bean
     public OrderService orderService(){
-
         System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
+
 }
