@@ -37,5 +37,4 @@ public class AppConfig {//외부에서 구현체의 생성과 관리를 담당. 
         System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
-
 }
